@@ -29,9 +29,7 @@
 <link href="css/all.min.css" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;900&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
 
-<!-- 
-    NOTA: Script Kiwify localizado no final do arquivo junto ao widget.
--->
+<!-- HOTMART - Sales Funnel Widget -->
 
 <style>
     /* RESET GERAL BLINDADO */
@@ -87,20 +85,6 @@
     @keyframes ds-pulse { 0%, 100% { opacity: 1; } 50% { opacity: .8; } }
     @keyframes ds-bounce { 0%, 100% { transform: translateY(-25%); } 50% { transform: translateY(0); } }
     
-    /* Ajustes para o botão da Kiwify ficar responsivo (ID ATUALIZADO) */
-    #kiwify-upsell-trigger-33lr9gZ {
-        width: 100% !important;
-        white-space: normal !important;
-        line-height: 1.3 !important;
-        transition: transform 0.2s !important;
-    }
-    #kiwify-upsell-trigger-33lr9gZ:hover {
-        transform: translateY(-2px) !important;
-        background-color: #27ae60 !important;
-    }
-    #kiwify-upsell-cancel-trigger-33lr9gZ {
-        color: #2563eb !important;
-    }
 </style>
 
 <div id="ds-wrapper" bis_skin_checked="1">
@@ -214,11 +198,15 @@
                 </p>
 
                 <!-- WIDGET KIWIFY INSERIDO (NOVO ID e LINKS) -->
-                <div style="text-align:center" id="kiwify-upsell-33lr9gZ" data-upsell-url="https://desafioviientresexy.site/up32812/" data-downsell-url="https://desafioviientresexy.site/up32812/" bis_skin_checked="1">
-                    <button id="kiwify-upsell-trigger-33lr9gZ" style="background-color:#2ECC70;padding:12px 16px;cursor:pointer;color:#FFFFFF;font-weight:600;border-radius:4px;border:1px solid #2ECC70;font-size:20px; width: 100%;">¡SÍ! QUIERO AGREGARLO A MI PAQUETE Por solo $9.90</button>
-                    <div id="kiwify-upsell-cancel-trigger-33lr9gZ" style="margin-top:1rem;cursor:pointer;font-size:16px;text-decoration:underline;font-family:sans-serif; color: #2563eb;" bis_skin_checked="1">No, gracias. Prefiero pagar el precio completo más tarde o perder esta oportunidad para siempre.</div>
-                </div>
-                <script src="js/upsell.min.js"></script>
+                <!-- HOTMART - Sales Funnel Widget -->
+                <!--- sales funnel container --->
+                <div id="hotmart-sales-funnel"></div>
+                <!--- script load and setup --->
+                <script src="https://checkout.hotmart.com/lib/hotmart-checkout-elements.js"></script>
+                <script>
+                checkoutElements.init('salesFunnel').mount('#hotmart-sales-funnel')
+                </script>
+                <!-- HOTMART - Sales Funnel Widget -->
                 
                 <p style="font-size: 12px; color: #9ca3af; margin-top: 15px;">
                     <i class="fas fa-lock"></i> Pago 100% Seguro y Encriptado
