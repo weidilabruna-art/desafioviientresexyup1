@@ -51,16 +51,7 @@
         100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(46, 204, 112, 0); }
     }
     
-    /* Aplica a animação ao botão da Kiwify (ID Atualizado) */
-    #kiwify-upsell-trigger-VTzA2A1 {
-        animation: pulsate-custom 2s infinite;
-        width: 100%; /* Garante largura cheia no mobile */
-        max-width: 400px; /* Limita largura no desktop */
-        transition: transform 0.2s;
-    }
-    #kiwify-upsell-trigger-VTzA2A1:hover {
-        transform: scale(1.02);
-    }
+
     
     /* MEDIA QUERIES - DESKTOP (A partir de 768px) */
     @media (min-width: 768px) {
@@ -173,13 +164,16 @@
                     </div>
                 </div>
 
-                <!-- KIWIFY UPSELL LINKS START (ID VTzA2A1) -->
-                <div style="text-align:center" id="kiwify-upsell-VTzA2A1" data-upsell-url="" data-downsell-url="" bis_skin_checked="1">
-                    <button id="kiwify-upsell-trigger-VTzA2A1" style="background-color:#2ECC70;padding:12px 16px;cursor:pointer;color:#FFFFFF;font-weight:600;border-radius:4px;border:1px solid #2ECC70;font-size:20px;">¡SÍ! AGREGAR AHORA - $9.90</button>
-                    <div id="kiwify-upsell-cancel-trigger-VTzA2A1" style="margin-top:1rem;cursor:pointer;font-size:16px;text-decoration:underline;font-family:sans-serif;" bis_skin_checked="1">No, gracias. Prefiero correr el riesgo de no tener planificación y crear mis propios menús sola.</div>
-                </div>
-                <script src="js/upsell.min.js"></script>
-                <!-- KIWIFY UPSELL LINKS END -->
+                <!-- HOTMART - Sales Funnel Widget -->
+                <!--- sales funnel container --->
+                <div id="hotmart-sales-funnel"></div>
+
+                <!--- script load and setup --->
+                <script src="https://checkout.hotmart.com/lib/hotmart-checkout-elements.js"></script>
+                <script>
+                checkoutElements.init('salesFunnel').mount('#hotmart-sales-funnel')
+                </script>
+                <!-- HOTMART - Sales Funnel Widget -->
                 
                 <p style="font-size: 12px; color: #9ca3af; margin-top: 15px; margin-bottom: 0;">
                     <i class="fas fa-lock"></i> Pago 100% Seguro. Acceso Inmediato.
@@ -201,7 +195,7 @@
 
     <!-- UPDATED FOOTER -->
     <div style="text-align: center; color: #6b7280; font-size: 12px; padding: 30px 15px; background-color: #f3f4f6;" bis_skin_checked="1">
-        <p style="margin: 0 0 15px 0;">© 2024 Club Menú Inteligente VIP. Todos los derechos reservados.</p>
+        <p style="margin: 0 0 15px 0;">© 2026 Club Menú Inteligente VIP. Todos los derechos reservados.</p>
         <div style="display: flex; justify-content: center; flex-wrap: wrap; gap: 20px;" bis_skin_checked="1">
             <a href="https://desafioviientresexy.site/politicas-de-privacidade/?code_senha=null&amount=NaN&payment_type=credit-card&payment_version=kiwipay&kw-parent-currency=USD" target="_blank" style="color: #6b7280; text-decoration: none; border-bottom: 1px dotted #9ca3af;">Políticas de Privacidad</a>
             <a href="https://desafioviientresexy.site/termos-de-uso/?code_senha=null&amount=NaN&payment_type=credit-card&payment_version=kiwipay&kw-parent-currency=USD" target="_blank" style="color: #6b7280; text-decoration: none; border-bottom: 1px dotted #9ca3af;">Términos de Uso</a>
